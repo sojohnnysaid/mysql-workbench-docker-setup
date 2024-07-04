@@ -20,7 +20,7 @@ The purpose of this setup is to:
 
 2. **Download the Docker Compose File**: You can clone the entire repository or simply download the `docker-compose.yml` file into this new directory.
     ```bash
-    curl -O https://raw.githubusercontent.com/yourusername/mysql-workbench-docker/main/docker-compose.yml
+    curl -O https://raw.githubusercontent.com/sojohnnysaid/mysql-workbench-docker-setup/main/docker-compose.yml
     ```
 
 3. **Prepare the Mount Points**: Before starting your containers, create the directories that will be used for bind mounts.
