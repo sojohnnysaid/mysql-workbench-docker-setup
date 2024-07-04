@@ -1,7 +1,7 @@
 services:
   db:
     image: mysql:8.0
-    container_name: mysql_db
+    container_name: mysql-workbench-db
     restart: always
     environment:
       MYSQL_ROOT_PASSWORD: rootpassword
@@ -11,19 +11,19 @@ services:
     ports:
       - "3306:3306"
     volumes:
-      - mysql_data:/var/lib/mysql
-      - ./db_data:/var/lib/mysql/db_data  # Bind mount for dynamic file sharing
+      - mysql_data_volume:/var/lib/mysql
+    command: --default-authentication-plugin=mysql_native_password
 
   mysql-workbench:
     image: lscr.io/linuxserver/mysql-workbench:latest
-    container_name: mysql-workbench
+    container_name: mysql-workbench-app
     environment:
       - PUID=1000
       - PGID=1000
       - TZ=Etc/UTC
     volumes:
-      - ./config:/config  # Bind mount using a relative path
-      - ./workbench_files:/mysql_workbench_files  # Another bind mount
+      - config_volume:/config
+      - files_volume:/mysql_workbench_files
     ports:
       - 3000:3000
       - 3001:3001
@@ -32,10 +32,10 @@ services:
     restart: unless-stopped
 
 volumes:
-  mysql_data:
+  mysql_data_volume:
     driver: local
-  mysql_workbench_config:
+  config_volume:
     driver: local
-  mysql_workbench_files:
+  files_volume:
     driver: local
 
