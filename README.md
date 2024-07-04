@@ -52,3 +52,6 @@ docker-compose down
 ```
 
 🎉 Happy Coding!
+
+<img width="947" alt="image" src="https://github.com/sojohnnysaid/mysql-workbench-docker-setup/assets/16521766/d103b358-8c68-4cbb-b12a-958e541e0fc5">
+
