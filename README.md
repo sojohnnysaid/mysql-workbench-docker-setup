@@ -25,7 +25,7 @@ The purpose of this setup is to:
 
 5. **Access MySQL Workbench**:
     - 🌐 Open your web browser.
-    - 🔗 Go to http://localhost:3000 (HTTP) or https://localhost:3001 (HTTPS).
+    - 🔗 Go to http://localhost:3009 (HTTP) or https://localhost:3011 (HTTPS).
 
 6. **Connect to your MySQL database**:
     - 🏠 Hostname: db
