@@ -26,8 +26,8 @@ services:
       - config_volume:/config
       - files_volume:/mysql_workbench_files
     ports:
-      - 3000:3000
-      - 3001:3001
+      - 3009:3000
+      - 3011:3001
     cap_add:
       - IPC_LOCK
     restart: unless-stopped
