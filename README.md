@@ -12,20 +12,10 @@ The purpose of this setup is to:
 
 ## 🏁 Quickstart
 
-1. **Create a New Directory**: For a clean setup, create a new directory in a convenient location on your system.
-    ```bash
-    mkdir my-mysql-setup
-    cd my-mysql-setup
-    ```
-
-2. **Download the Docker Compose File**: You can clone the entire repository or simply download the `docker-compose.yml` file into this new directory.
-    ```bash
-    curl -O https://raw.githubusercontent.com/sojohnnysaid/mysql-workbench-docker-setup/main/docker-compose.yml
-    ```
-
-3. **Prepare the Mount Points**: Before starting your containers, create the directories that will be used for bind mounts.
-    ```bash
-    mkdir config workbench_files db_data
+1. **Clone the repo and jump into the directory
+    ```bass
+    git clone https://github.com/sojohnnysaid/mysql-workbench-docker-setup.git
+    cd mysql-workbench-docker-setup
     ```
 
 4. **Start the Containers**: Navigate to the directory where your `docker-compose.yml` file is located and start your Docker environment.
